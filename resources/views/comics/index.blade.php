@@ -1,6 +1,10 @@
 @extends('layouts.main')
 
 @section('main')
+    <div>
+        <a href="{{ route('comics.create') }}" class="btn btn-primary ">Crea un comic</a>
+    </div>
+
     <section class="container py-5">
 
         <div class="row row-cols-4 gap-5">
