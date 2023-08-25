@@ -24,7 +24,7 @@
             <a href="{{ route('comics.index') }}" class="navbar-brand">Comics</a>
         </nav>
     </header>
-    <main class="container py-5">
+    <main>
         @yield('main')
     </main>
 </body>
