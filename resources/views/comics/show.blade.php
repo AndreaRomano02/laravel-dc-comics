@@ -1,5 +1,7 @@
 @extends('layouts.main')
 
+@section('title', $comic['title'])
+
 @section('main')
     <section id="single-comic">
         <div class="bg-blue"></div>
