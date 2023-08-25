@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comic extends Model
 {
-    use HasFactory;
+  use HasFactory;
+
+  public function getAbstract()
+  {
+    return substr($this->description, 0, 100) . '...';
+  }
 }

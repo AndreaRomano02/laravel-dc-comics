@@ -18,7 +18,13 @@
 </head>
 
 <body>
-    <main>
+    <header>
+        <nav class="px-5 navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+            <a href="{{ route('home') }}" class="navbar-brand">Homepage</a>
+            <a href="{{ route('comics.index') }}" class="navbar-brand">Comics</a>
+        </nav>
+    </header>
+    <main class="container py-5">
         @yield('main')
     </main>
 </body>
