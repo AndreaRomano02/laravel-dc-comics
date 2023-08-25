@@ -4,7 +4,9 @@
 
 @section('main')
     <div class="container">
-        <form action="" method="POST" class="row mt-5">
+        <form action="{{ route('comics.store') }}" method="POST" class="row mt-5">
+            @csrf
+
             <div class="mb-3 col-6">
                 <label for="title" class="form-label">Titolo</label>
                 <input type="text" class="form-control" name="title" id="title" placeholder="Inserisci il titolo..."
