@@ -24,6 +24,7 @@
                             <p class="card-text"> <strong>Description: </strong>{{ $comic->getAbstract() }}</p>
 
                             <a href="{{ url("comics/$comic->id") }}" class="btn btn-outline-info">Info</a>
+                            <a href="{{ url("comics/$comic->id/edit") }}" class="btn btn-outline-warning">Modifica</a>
                         </div>
                     </div>
                 @endforeach

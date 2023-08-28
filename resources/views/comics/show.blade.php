@@ -4,7 +4,9 @@
 
 @section('main')
     <section id="single-comic">
-        <div class="bg-blue"></div>
+        <div class="bg-blue d-flex justify-content-end align-items-center">
+            <a href="{{ url("comics/$comic->id/edit") }}" class="btn btn-warning me-5">Modifica</a>
+        </div>
 
         {{-- # Immagine copertina --}}
         <div class="img-container">
