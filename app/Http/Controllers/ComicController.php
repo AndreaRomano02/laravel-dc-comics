@@ -35,11 +35,11 @@ class ComicController extends Controller
       'description' => 'required|string',
       'thumb' => 'url:http,https',
       'price' => 'required|string',
-      'sale_date' => 'string',
-      'series' => 'string',
-      'type' => 'string',
-      'artists' => 'string',
-      'writers' => 'string'
+      'sale_date' => 'string|nullable',
+      'series' => 'string|nullable',
+      'type' => 'string|nullable',
+      'artists' => 'string|nullable',
+      'writers' => 'string|nullable'
     ]);
 
     $data = $request->all();
@@ -76,11 +76,11 @@ class ComicController extends Controller
       'description' => 'required|string',
       'thumb' => 'url:http,https',
       'price' => 'required|string',
-      'sale_date' => 'string',
-      'series' => 'string',
-      'type' => 'string',
-      'artists' => 'string',
-      'writers' => 'string'
+      'sale_date' => 'string|nullable',
+      'series' => 'string|nullable',
+      'type' => 'string|nullable',
+      'artists' => 'string|nullable',
+      'writers' => 'string|nullable'
     ]);
 
     $data = $request->all();

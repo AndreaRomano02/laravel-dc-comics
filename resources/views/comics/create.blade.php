@@ -4,7 +4,19 @@
 
 @section('main')
     <div class="container">
-        <form action="{{ route('comics.store') }}" method="POST" class="row mt-5">
+
+        {{-- #Allert per gli errori --}}
+        @if ($errors->any())
+            <div class="alert alert-danger mt-3">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+        <form action="{{ route('comics.store') }}" method="POST" class="row mt-5" novalidate>
             @csrf
 
             <div class="mb-3 col-6">
