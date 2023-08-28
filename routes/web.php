@@ -15,10 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'home'])->name('home');
-Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
-Route::get('/comics/create', [ComicController::class, 'create'])->name('comics.create');
-Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');
-Route::get('/comics/{comic}/edit', [ComicController::class, 'edit'])->name('comics.edit');
-Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');
-Route::put('/comics', [ComicController::class, 'update'])->name('comics.update');
+Route::resource('comic', ComicController::class);

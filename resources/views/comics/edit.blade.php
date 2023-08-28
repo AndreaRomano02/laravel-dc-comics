@@ -8,6 +8,7 @@
             @csrf
             @method('PUT')
 
+
             <div class="mb-3 col-6">
                 <label for="title" class="form-label">Titolo</label>
                 <input type="text" class="form-control" name="title" id="title" value="{{ $comic->title }}" required>
