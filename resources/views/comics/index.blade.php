@@ -1,5 +1,7 @@
 @extends('layouts.main')
 
+@section('title', 'comics')
+
 @section('main')
     <div class="text-end">
 
@@ -27,7 +29,7 @@
                             <a href="{{ url("comics/$comic->id") }}" class="btn btn-outline-info">Info</a>
                             <a href="{{ url("comics/$comic->id/edit") }}" class="btn btn-outline-warning">Modifica</a>
                             <form class="destroy-form d-inline" method="POST"
-                                action="{{ route('comics.destroy', $comic->id) }}">
+                                action="{{ route('comics.destroy', $comic->id) }}" data-title="{{ $comic->title }}">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-outline-danger ">Elimina</button>

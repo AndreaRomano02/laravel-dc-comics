@@ -7,7 +7,8 @@
         <div class="bg-blue d-flex justify-content-end align-items-center">
             <a href="{{ url("comics/$comic->id/edit") }}" class="btn btn-warning">Modifica</a>
 
-            <form class="destroy-form d-inline mx-3" method="POST" action="{{ route('comics.destroy', $comic->id) }}">
+            <form class="destroy-form d-inline mx-3" method="POST" action="{{ route('comics.destroy', $comic->id) }}"
+                data-title="{{ $comic->title }}">
                 @csrf
                 @method('DELETE')
                 <button class="btn btn-danger ">Elimina</button>
