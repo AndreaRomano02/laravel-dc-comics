@@ -5,7 +5,13 @@
 @section('main')
     <section id="single-comic">
         <div class="bg-blue d-flex justify-content-end align-items-center">
-            <a href="{{ url("comics/$comic->id/edit") }}" class="btn btn-warning me-5">Modifica</a>
+            <a href="{{ url("comics/$comic->id/edit") }}" class="btn btn-warning">Modifica</a>
+
+            <form class="d-inline mx-3" method="POST" action="{{ route('comics.destroy', $comic->id) }}">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger ">Elimina</button>
+            </form>
         </div>
 
         {{-- # Immagine copertina --}}

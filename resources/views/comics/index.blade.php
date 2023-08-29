@@ -2,6 +2,7 @@
 
 @section('main')
     <div class="text-end">
+
         <a href="{{ route('comics.create') }}" class="btn btn-primary m-3 p-3">Crea un comic</a>
     </div>
 
