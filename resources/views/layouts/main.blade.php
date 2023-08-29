@@ -29,4 +29,6 @@
     </main>
 </body>
 
+@yield('script')
+
 </html>

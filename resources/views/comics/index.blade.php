@@ -26,7 +26,8 @@
 
                             <a href="{{ url("comics/$comic->id") }}" class="btn btn-outline-info">Info</a>
                             <a href="{{ url("comics/$comic->id/edit") }}" class="btn btn-outline-warning">Modifica</a>
-                            <form class="d-inline" method="POST" action="{{ route('comics.destroy', $comic->id) }}">
+                            <form class="destroy-form d-inline" method="POST"
+                                action="{{ route('comics.destroy', $comic->id) }}">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-outline-danger ">Elimina</button>
@@ -41,4 +42,8 @@
             @endif
         </div>
     </section>
+@endsection
+
+@section('script')
+    @vite('resources/js/destroy-form.js')
 @endsection
