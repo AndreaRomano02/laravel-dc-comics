@@ -2,6 +2,7 @@
 
 @section('main')
     <div class="text-end">
+
         <a href="{{ route('comics.create') }}" class="btn btn-primary m-3 p-3">Crea un comic</a>
     </div>
 
@@ -25,6 +26,12 @@
 
                             <a href="{{ url("comics/$comic->id") }}" class="btn btn-outline-info">Info</a>
                             <a href="{{ url("comics/$comic->id/edit") }}" class="btn btn-outline-warning">Modifica</a>
+                            <form class="destroy-form d-inline" method="POST"
+                                action="{{ route('comics.destroy', $comic->id) }}">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-outline-danger ">Elimina</button>
+                            </form>
                         </div>
                     </div>
                 @endforeach
@@ -35,4 +42,8 @@
             @endif
         </div>
     </section>
+@endsection
+
+@section('script')
+    @vite('resources/js/destroy-form.js')
 @endsection
